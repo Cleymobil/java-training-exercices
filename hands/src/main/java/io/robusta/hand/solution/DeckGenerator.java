@@ -11,8 +11,13 @@ public class DeckGenerator implements IDeckGenerator {
 		Deck deck = new Deck();
 
 		// fill the deck with cards
-        // Probably use the good modulo
-		for (int i = 1; i <= 52; i++) {
+		// Probably use the good modulo
+		for (int i = 1; i <= 13; i++) {
+			for (int j = 1; j <= 4; j++) {
+				Card card = new Card(i, CardColor.getByValue(j));
+
+				deck.add(card);
+			}
 
 		}
 		return deck;
